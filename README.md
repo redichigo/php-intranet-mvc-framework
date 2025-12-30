@@ -1,7 +1,7 @@
 # 📌 php-intranet-mvc-framework
 ![PHP Version](https://img.shields.io/badge/PHP-7.4%2B-777BB4?style=flat&logo=php)
-![License](https://img.shields.io/badge/Licencia-Privada-red?style=flat)
-![Status](https://img.shields.io/badge/Estado-En%20desarrollo-yellow?style=flat)
+![License](https://img.shields.io/badge/Licencia-MIT-green?style=flat)
+![Estado](https://img.shields.io/badge/Estado-En%20desarrollo-yellow?style=flat)
 ![Last Commit](https://img.shields.io/github/last-commit/maurikius-dev/php-intranet-mvc-framework?style=flat)
 ![Repo Size](https://img.shields.io/github/repo-size/maurikius-dev/php-intranet-mvc-framework?style=flat)
 
