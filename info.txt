@@ -52,7 +52,6 @@ PASO 5: Editar el ".htaccess" descomentando la linea "#RewriteBase /" que apunta
         - Controller.php: Clase donde llegan las peticiones ajax para enlazar con el modelo.
         - Model.php: Clase donde se hacen las querys a bbdd y retorna al controllador.
 
-
 - .htaccess: Archivo para configurar y reescribir las reglas para el hosting.
 - favicon: Icono que se mostrará en la pestaña del navegador.
 - index.php: Archivo por donde pasan las peticiones y configuracion del proyecto (Mejor no tacar).
