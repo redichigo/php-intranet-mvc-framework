@@ -28,7 +28,7 @@ Incluye gestión de sesiones, sistema de módulos, controladores, modelos, vista
 - Collation: **utf8_general_ci**
 
 ### 2. Importar la estructura inicial
-Ejecuta la query ubicada en: `assets/SQL/intranet.sql`
+Ejecuta la query ubicada en: `assets/sql/intranet.sql`
 
 ### 3. Configurar la conexión a la base de datos
 Edita el archivo: `config/connections.php`
@@ -68,14 +68,14 @@ Debe apuntar a la raíz del hosting o al subdirectorio donde esté instalada la 
     - Errores: Archivos php para los errores de servidor (401, 402, 403).
     - includes: Archivos para fragmentar las vistas que son comunes.
         - info_meta.php: Etiquetas meta (html) y título del proyecto.
-        - Menú_top: Menú superior comun en todos los módulos.
+        - menu_top: Menú superior comun en todos los módulos.
         - static_css: Etiquetas stylesheet (html) con las constantes referenciadas comunes en los  módulos.
         - static_js: Etiquetas Script (html) con las constantes referenciadas de librerías y script comunes en los  módulos.
     - login: Módulo para el login en la intranet
         - Resources: Directorio donde almacenan directorios específicos del Módulo (img, pdf, sonidos...)
         - view.php: html con la vista y los includes.
-        - style.php: Estilos css de ese Módulo en concreto.
-        - script.php: JS del Módulo en concreto (peticiones ajax, funcionalidades...).
+        - style.php: Estilos css de ese módulo en concreto.
+        - script.php: JS del módulo en concreto (peticiones ajax, funcionalidades...).
         - Controller.php: Clase donde llegan las peticiones ajax para enlazar con el modelo.
         - Model.php: Clase donde se hacen las queries a la BBDD y retorna al controlador.
 
