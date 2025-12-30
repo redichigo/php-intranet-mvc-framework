@@ -1,0 +1,59 @@
+------------------------------------------------------------------------------------------------------
+- INSTALACION
+------------------------------------------------------------------------------------------------------
+
+PASO 1: Crear una base de datos con el nombre "intranet" codificación utf8 y utf_general_ci en el hosting.
+PASO 2: Ejecutar la query que está en "assets/sql/intranet.sql" en el hosting.
+PASO 3: Cambiar los datos de conexión a la base de dastos por los del hosting "config/connections.php".
+PASO 4: Subir la carpeta en la ruta dada del hosting, normalmente en la raiz "/".
+
+// RUTAS DE LA APP (EJEMPLO)
+define("BASE_URL", "/intranet/");
+
+PASO 5: Editar el ".htaccess" descomentando la linea "#RewriteBase /" que apunta a la raiz del hosting.
+
+------------------------------------------------------------------------------------------------------
+- ESTRUCTURA DEL PROYECTO
+------------------------------------------------------------------------------------------------------
+
+- asset: Directorio para almacenar los recursos globales del proyecto.
+    - css: Archivo de css global.
+    - font: Fuentes descargadas.
+    - img: Imagenes globales.
+    - js: Archivo js global.
+    - plugins: Todas las librerias del proyecto (Bootstarp, jquery, fontawesome...).
+    - sql: Archivos sql (por ejemplo el global para crear los accesos y usuarios).
+
+
+- config: Directorio de archivos de configuracion del proyecto.
+    - app.php: Definicion de constantes para el funcionamiento del proyecto.
+    - connections.php: Array de conexiones a diferentes bbdd, por defecto intranet.
+    - Database: Clase con el metodo query (PDO mysql). 
+    - functions_js.php: Repositorio de funciones genericas js.
+    - functions.php: Repositorio de funciones genericas php. 
+    - libs.php: Definicion de constantes con los path de las librerias de terceros.
+    - Session: Clases para el control de sessiones.
+
+
+- modules: Directorio para los diferentes modulos (paginas) del proyecto.
+    - Errores: Archivos php para los errores de servidor (4.1, 402, 403).
+
+    - includes: Archivos para fragmentar las vistas que son comunes.
+        - info_meta.php: Etiquetas meta (html) y titulo del proyecto.
+        - menu_top: Menu superior comun en todos los modulos.
+        - static_css: Etiquetas stylesheet (html) con las constantes referenciadas comunes en los modulos.
+        - static_js: Etiquetas Script (html) con las constantes referenciadas de librerias y script comunes en los modulos.
+
+    - login: Modulo para el login en la intranet
+        - Resources: Directorio donde almacenan directorios especificos del modulo (img, pdf, sonidos...)
+        - view.php: html con la vista y los includes.
+        - style.php: Estilos css de ese modulo en concreto.ç
+        - script.php: JS del modulo en concreto (peticiones ajax, funcionalidades...).
+        - Controller.php: Clase donde llegan las peticiones ajax para enlazar con el modelo.
+        - Model.php: Clase donde se hacen las querys a bbdd y retorna al controllador.
+
+
+- .htaccess: Archivo para configurar y reescribir las reglas para el hosting.
+- favicon: Icono que se mostrará en la pestaña del navegador.
+- index.php: Archivo por donde pasan las peticiones y configuracion del proyecto (Mejor no tacar).
+- info.txt: Este mismo archivo ;).
