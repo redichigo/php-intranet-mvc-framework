@@ -41,28 +41,28 @@ class Controller
         if ($data != 'error_sql' && $data != 'sin_acceso' && $data != 'sin_datos' && $data != 'sin_roles') {
 
             if ($data['acceso'][0]['ESTADO'] !== 'ACTIVO') {
-                http_response_code(403); // Forbidden
+                http_response_code(403);
                 echo json_encode(['error' => 'El usuario no está activo.']);
                 return;
             }
 
-            // Inicio la sesión
+            // INICIO LA SESIÓN
             session_start();
 
-            // Regenerar ID de sesión por seguridad
+            // REGENERAR ID DE SESIÓN POR SEGURIDAD
             session_regenerate_id(true);
 
-            // Añadir variables de sesión
+            // AÑADIR VARIABLES DE SESIÓN
             $_SESSION['status'] = 1;
             $_SESSION['identificador'] = $data['acceso'][0]['IDENTIFICADOR'];
             $_SESSION['rol'] = array_column($data['roles'], 'ROL');
 
-            // Retornar los datos de sesión
-            http_response_code(200); // OK
+            // RETORNAR LOS DATOS DE SESIÓN
+            http_response_code(200);
             echo json_encode("ok");
 
         } else {
-            // Retornar el error
+            // RETORNAR EL ERROR
             echo json_encode($data);
         }
     }
@@ -72,16 +72,16 @@ class Controller
     // ----------------------------------------------------------------------------
     public function logout()
     {
-        // Iniciar la sesión si no está iniciada
+        // INICIAR LA SESIÓN SI NO ESTÁ INICIADA
         session_start();
 
-        // Destruir todas las variables de sesión
+        // DESTRUIR TODAS LAS VARIABLES DE SESIÓN
         $_SESSION = array();
 
-        // Destruir la sesión
+        // DESTRUIR LA SESIÓN
         session_destroy();
 
-        // Redirigir al usuario al inicio
+        // REDIRIGIR AL USUARIO AL INICIO
         header('Location: ' . BASE_URL);
     }
 }

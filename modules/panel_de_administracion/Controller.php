@@ -16,12 +16,12 @@ class Controller
     // ----------------------------------------------------------------------------
     public function __construct()
     {
-        // Inicia la sesión si no está ya iniciada
+        // INICIA LA SESIÓN SI NO ESTÁ YA INICIADA
 		session_start();
 
-        // Comprueba el estado de la sesión
+        // COMPRUEBA EL ESTADO DE LA SESIÓN
         if (empty($_SESSION['status']) || $_SESSION['status'] != 1) {
-            // Redirige al usuario a la página base si no está autorizado
+            // REDIRIGE AL USUARIO A LA PÁGINA BASE SI NO ESTÁ AUTORIZADO
             header('Location: ' . BASE_URL);
             exit();
         }
