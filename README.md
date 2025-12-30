@@ -106,8 +106,4 @@ Debe apuntar a la raíz del hosting o al subdirectorio donde esté instalada la 
 Mauricio Fuentes Raposo  
 Team Leader & Backend Developer — Especializado en PHP y arquitecturas MVC para entornos corporativos.
 GitHub: @maurikius-dev
-  
----
 
-### 📄 Licencia
-Proyecto privado. No se permite su distribución sin autorización.
