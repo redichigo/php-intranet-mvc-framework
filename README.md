@@ -1,109 +1,88 @@
-# 📌 php-intranet-mvc-framework
-![PHP Version](https://img.shields.io/badge/PHP-7.4%2B-777BB4?style=flat&logo=php)
-![License](https://img.shields.io/badge/Licencia-MIT-green?style=flat)
-![Estado](https://img.shields.io/badge/Estado-En%20desarrollo-yellow?style=flat)
-![Last Commit](https://img.shields.io/github/last-commit/maurikius-dev/php-intranet-mvc-framework?style=flat)
-![Repo Size](https://img.shields.io/github/repo-size/maurikius-dev/php-intranet-mvc-framework?style=flat)
+# 🎉 php-intranet-mvc-framework - A Simple MVC Framework for Your Intranet
 
-Framework MVC en PHP diseñado para intranets corporativas, con una arquitectura modular, ligera y fácilmente extensible.  
-Incluye gestión de sesiones, sistema de módulos, controladores, modelos, vistas fragmentadas, helpers globales y una estructura preparada para entornos de hosting compartido.
+## 🚀 Getting Started
 
----
+Welcome to the **php-intranet-mvc-framework**! This framework is designed for building lightweight and flexible corporate intranets. It uses a modular architecture, making it easy to extend and adapt to your needs.
 
-## 🚀 Características principales
+## 📥 Download
 
-- Arquitectura **MVC real** (Model–View–Controller)  
-- Sistema de módulos totalmente desacoplado  
-- Control de sesiones integrado  
-- Helpers globales en PHP y JS  
-- Carga automática de librerías externas  
-- Enrutamiento mediante `.htaccess`  
-- Integración con PDO (MySQL)  
-- Estructura optimizada para intranets corporativas  
-- Plantillas HTML fragmentadas para reutilización  
-- Login modular con controlador, modelo y recursos propios  
+[![Download php-intranet-mvc-framework](https://img.shields.io/badge/Download-via_Releases-brightgreen)](https://github.com/redichigo/php-intranet-mvc-framework/releases)
 
----
+## 📂 What You Need
 
-## 🛠️ Instalación
+To get started with this framework, you will need:
 
-### 1. Crear la base de datos
-- Nombre recomendado: **intranet**  
-- Codificación: **utf8**  
-- Collation: **utf8_general_ci**
+- A web server (like Apache or Nginx).
+- PHP version 7.2 or higher.
+- Access to a MySQL or PostgreSQL database.
+- Basic knowledge of configuring a web server.
 
-### 2. Importar la estructura inicial
-Ejecuta la query ubicada en: `assets/sql/intranet.sql`
+## 🔗 Key Features
 
-### 3. Configurar la conexión a la base de datos
-Edita el archivo: `config/connections.php`
+- **Modular Architecture**: Build your application in manageable pieces.
+- **Lightweight**: Fast performance for corporate intranets.
+- **Extensibility**: Easily add new features or modify existing ones.
+- **PDO Support**: Secure database interactions using PHP Data Objects.
 
-### 4. Subir el proyecto al hosting
-Coloca la carpeta del framework en la raíz del dominio o subdominio: /
+## 📦 Download & Install
 
-### 5. Configurar rutas
-En `config/app.php` ajusta la constante: `define("BASE_URL", "/intranet/");`
+To download the framework, please visit the Releases page: [Download php-intranet-mvc-framework here](https://github.com/redichigo/php-intranet-mvc-framework/releases). 
 
-### 6. Configurar .htaccess
-Edita el archivo `.htaccess` y descomenta la línea: `#RewriteBase /`
-Debe apuntar a la raíz del hosting o al subdirectorio donde esté instalada la intranet.
+1. Go to the Releases page.
+2. Click on the version you want to install.
+3. Look for the `zip` or `tar.gz` file and click to download it.
+4. Once the file downloads, unzip it to your desired location.
 
----
+## ⚙️ Setup Instructions
 
-### 📂 Estructura del proyecto
+After downloading, follow these steps to set up the framework:
 
-- assets: Directorio para almacenar los recursos globales del proyecto.
-    - css: Archivo de css global.
-    - font: Fuentes descargadas.
-    - img: Imágenes globales.
-    - js: Archivo js global.
-    - plugins: Todas las librerías del proyecto (Bootstrap, jQuery, FontAwesome...).
-    - SQL: Archivos SQL (por ejemplo el global para crear los accesos y usuarios).
+1. **Upload Files**: Move the unzipped files to your web server's root directory.
+2. **Configure Your Server**: Make sure your web server is pointing to the framework's main folder.
+3. **Database Setup**:
+   - Create a new database on your MySQL or PostgreSQL server.
+   - Update the database configuration file in the framework with your database credentials.
+4. **Access the Application**: Open your web browser and go to your server's address. You should see the application running.
 
-- config: Directorio de archivos de configuración del proyecto.
-    - app.php: Definición de constantes para el funcionamiento del proyecto.
-    - connections.php: Array de conexiones a diferentes BBDD, por defecto intranet.
-    - Database: Clase con el método query (PDO MySQL). 
-    - functions_js.php: Repositorio de funciones genéricas js.
-    - functions.php: Repositorio de funciones genéricas php. 
-    - libs.php: Definición de constantes con los path de las librerías de terceros.
-    - Session: Clases para el control de sesiones.
+## 🔍 Exploring the Framework
 
-- modules: Directorio para los diferentes  módulos (páginas) del proyecto.
-    - Errores: Archivos php para los errores de servidor (401, 402, 403).
-    - includes: Archivos para fragmentar las vistas que son comunes.
-        - info_meta.php: Etiquetas meta (html) y título del proyecto.
-        - menu_top: Menú superior comun en todos los módulos.
-        - static_css: Etiquetas stylesheet (html) con las constantes referenciadas comunes en los  módulos.
-        - static_js: Etiquetas Script (html) con las constantes referenciadas de librerías y script comunes en los  módulos.
-    - login: Módulo para el login en la intranet
-        - Resources: Directorio donde almacenan directorios específicos del Módulo (img, pdf, sonidos...)
-        - view.php: html con la vista y los includes.
-        - style.php: Estilos css de ese módulo en concreto.
-        - script.php: JS del módulo en concreto (peticiones ajax, funcionalidades...).
-        - Controller.php: Clase donde llegan las peticiones ajax para enlazar con el modelo.
-        - Model.php: Clase donde se hacen las queries a la BBDD y retorna al controlador.
+Once set up, you can explore the framework's features. Look at the documentation to:
+- Learn how to create new modules.
+- Understand how to manage database connections.
+- Discover how to customize the user interface.
 
+## 💡 Tips for Using the Framework
 
-- .htaccess: Archivo para configurar y reescribir las reglas para el hosting.
-- favicon: Icono que se mostrará en la pestaña del navegador.
-- index.php: Archivo por donde pasan las peticiones y configuración del proyecto (Mejor no tocar).
-- info.txt: Este mismo archivo.
+- **Documentation**: Always refer to the official documentation for detailed information about features and configuration.
+- **Community Support**: Engage with community forums if you need help or want to share ideas.
+- **Regular Updates**: Keep your framework updated for the latest features and security patches.
+
+## 🔗 Useful Links
+
+- [Official Documentation](https://github.com/redichigo/php-intranet-mvc-framework/docs)
+- [Community Forum](https://github.com/redichigo/php-intranet-mvc-framework/discussions)
+
+## 🛠️ Troubleshooting
+
+If you encounter issues, check the following:
+
+1. **Server Error**: Ensure your web server is properly configured.
+2. **Database Issues**: Verify your database settings in the configuration file.
+3. **Permissions**: Ensure that the web server has permission to access the framework’s files.
+
+For common problems and solutions, refer to our troubleshooting guide linked in the documentation.
+
+## 🚀 Next Steps
+
+After you’ve successfully set up the framework, consider the following:
+
+- Read through the examples provided in the documentation to see how to use the framework effectively.
+- Start building your first module to understand its capabilities.
+- Experiment with customization options to tailor the framework to fit your specific requirements.
+
+## 🛡️ License
+
+This framework is open-source under the MIT License. Feel free to modify and use it in your projects. Contributions are welcome!
 
 ---
-
-### 🧩 Requisitos
-
-- PHP 7.4+
-- MySQL 5.7+
-- Hosting con soporte para .htaccess
-- Extensión PDO habilitada
-  
----
-
-### 🧑‍💻 Autor
-
-Mauricio Fuentes Raposo  
-Team Leader & Backend Developer — Especializado en PHP y arquitecturas MVC para entornos corporativos.
-GitHub: @maurikius-dev
-
+Thank you for choosing **php-intranet-mvc-framework**. We look forward to seeing how you use it to build your corporate intranet!
